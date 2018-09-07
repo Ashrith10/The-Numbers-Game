@@ -9,6 +9,9 @@ while ruleans == "yes":
     print("THE GAME IS SIMPLE!")
     print("all you have to do is pick a number between 1-10")
     print("and who ever crosses the final number 50 is the loser!")
+    print("There is also a score aspect")
+    print("Your score will be all your chosen numbers added together")
+    print("Try and get the highest score!")
     print("press ENTER start")
     ruleans = str(input(""))
 
@@ -34,6 +37,8 @@ while oppoans == False:
 
             pt1 = 0
             pt2 = 0
+            scorep1 = 0
+            scorep2 = 0
 
             x = 0
 
@@ -61,12 +66,14 @@ while oppoans == False:
                     else:
                         print("Please enter a number between 1-10")
                 x = x + int(xadd)
+                scorep1 += int(xadd)
                 pt1 -= 1
                 pt2 += 1
               elif pt2 == 1:
                 print("Its",p2 + "'s","Turn")
                 xadd = random.randint(1,10)
                 x = x + xadd
+                scorep2 += xadd
                 pt2 -= 1
                 pt1 += 1
 
@@ -77,6 +84,7 @@ while oppoans == False:
                 print(" ")
                 print(" ")
                 print(p1,"WINS!!!!!!")
+                print("Your Score:",scorep1)
             elif pt2 == 1:
                 print(" ")
                 print(" ")
@@ -84,6 +92,7 @@ while oppoans == False:
                 print(" ")
                 print(" ")
                 print(p2, "WINS!!!!!!")
+                print("Computer's Score:",scorep2)
 
             print(" ")
             print(" ")
@@ -119,6 +128,8 @@ while oppoans == False:
 
             pt1 = 0
             pt2 = 0
+            scorep1 = 0
+            scorep2 = 0
 
             x = 0
 
@@ -146,6 +157,7 @@ while oppoans == False:
                     else:
                         print("Please enter a number between 1-10")
                 x = x + int(xadd)
+                scorep1 += int(xadd)
                 pt1 -= 1
                 pt2 += 1
               elif pt2 == 1:
@@ -164,6 +176,7 @@ while oppoans == False:
                     else:
                         print("Please enter a number between 1-10")
                 x = x + int(xadd)
+                scorep2 += int(xadd)
                 pt2 -= 1
                 pt1 += 1
 
@@ -174,6 +187,7 @@ while oppoans == False:
                 print(" ")
                 print(" ")
                 print(p1,"WINS!!!!!!")
+                print(p1 + "'s Score:",scorep1)
             elif pt2 == 1:
                 print(" ")
                 print(" ")
@@ -181,6 +195,7 @@ while oppoans == False:
                 print(" ")
                 print(" ")
                 print(p2, "WINS!!!!!!")
+                print(p2 + "'s Score:",scorep2)
 
             print(" ")
             print(" ")
